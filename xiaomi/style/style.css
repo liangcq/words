@@ -1,0 +1,160 @@
+/* CSS Document */
+/*大框架*/
+*{
+	margin:0;
+	padding:0;}
+	/*我们在初学阶段可以这么设置，后期项目会选择某一些标签设置内外边距为0。*/
+body{
+	font-family:"microsoft yahei";
+	font-size:14px;
+	color:#000;}
+a{
+	text-decoration:none;}
+ul{
+	list-style-type:none;}
+.clear{
+	clear:both;}
+	
+	
+/*头部菜单*/
+#head{
+	height:49px;
+	background-color:#000;
+	line-height:49px;}
+#head_left{
+	float:left;
+	padding:16px 0 0 50px;}
+#head_right{
+	float:right;
+	padding-right:50px;}
+#head_right ul li{
+	display:inline;
+	padding:0 15px;}
+#head_right ul li a{
+	color:#DDD;}
+#head_right ul li a:hover{
+	color:#868686;}
+	
+/*先声夺人*/                  /*重点，溢出；定位；兼容性。*/
+#xm_con_1{
+	height:796px;
+	background:#efefef url(../images/miui7.5-001.jpg) no-repeat center center scroll;
+	width:auto;/*背景属性中的fixed，可以让背景不随内容动。*/
+	overflow:hidden;/*溢出浮动*/}
+#xm_con_1_ljty{
+	text-align:center;
+	position:relative;
+	top:200px;/*现对定位，将这个盒子向下移动*/}
+#xm_con_1_ljty a{   /*a标签做按钮*/
+	display:block;
+	width:154px;
+	height:36px;
+	line-height:36px;
+	color:#636363;
+	font-size:15px;
+	border:1px solid #757575;
+	border-radius:18px;/*这个属性属于css3的，高版本的浏览器兼容，低版本不兼容（ie6以下）。解决方法，一：引进css3本地文件，放到根目录下，在此处写一行代码。二，在代码head中，写入引入样式，用户在有网的时候，会自动判断，若版本太低，会自动加载css。*/
+	margin:30px auto;/*30px会导致大盒子也移动，所以要给父元素设置“溢出浮动”*/}
+#xm_con_1_ljty p{
+	color:#878787;
+	font-size:19px;}
+	
+/*好用从点亮屏幕开始 一栏*/
+#xm_con_2{
+	background:url(../images/miui7.5-031.jpg) no-repeat center center;/*大的图片也可以适应浏览器*/
+	height:1280px;/*高度一定要设置，宽度可以不设置，但用绝对定位后，要设置宽高。*/}
+#xm_con_2_text{
+	text-align:center;
+	position:relative;/*定位，移动盒子，从而让文字移动，打字大小是根据里面的内容决定的，所以可以通过定位盒子来移动文字*/
+	top:100px;/*定位后向下移动100px*/}
+#xm_con_2_text h2{
+	font-size:35px;
+	font-weight:100;
+	line-height:80px;}
+#xm_con_2_text p{
+	font-size:18px;
+	color:#9e9d9b;
+	line-height:40px;}
+	
+/*小米公交*/
+#xm_con_3{
+	height:1710px;
+	text-align:center;
+	overflow:hidden;}/*使用绝对定位后，要重新设定宽高。这里不使用。*/
+#xm_con_3 h2{
+	font-size:35px;
+	font-weight:100;
+	color:#585858;
+	line-height:90px;
+	margin-top:80px;}
+#xm_con_3 p{
+	font-size:18px;
+	color:#8d8d8d;
+	line-height:30px;}
+#xm_con_3 p.zs{/*zs是在p标签里面，不是层级机构，所以是p.zs，当一个标签有多个class时，这种方法很好用*/
+	font-size:16px;
+	color:#ccc;
+	margin-top:30px;}
+#xm_con_3_bottom{
+	height:800px;
+	background:url(../images/miui7.5-002.jpg) no-repeat center center;
+	margin-top:30px;
+	overflow:hidden;/*由于#xm_con_3_bottom ul里用了margin-top，所以这里要溢出隐藏*/}
+#xm_con_3_bottom ul{
+	width:1241px;
+	margin-top:770px;}
+#xm_con_3_bottom ul li{
+	display:inline;
+	color:#8d8d8d;
+	font-size:18px;
+	padding:0 135px;}
+#xm_con_3_bottom ul li.con_3_menu2 span{
+	position:relative;
+	left:70px;}
+#xm_con_3_bottom ul li.con_3_menu3 span{
+	position:relative;
+	left:70px;}
+	
+#xm_con_3 h4{
+	color:#585858;
+	font-size:22px;
+	line-height:30px;
+	font-weight:100;
+	margin-top:80px;}
+#sys1{
+	margin:0 auto;
+	width:1125px;
+	height:360px;
+	background:url(../images/miui7.5-004.jpg) no-repeat center center;
+	overflow:hidden;}
+#sys1 ul{
+	margin-top:335px}
+#sys1 ul li{
+	display:inline;
+	color:#8d8d8d;
+	font-size:18px;
+	padding:0 233px;}
+	
+	
+/*最底部一栏*/
+#footer{
+	height: 160px;
+	text-align: center;
+	/* [disabled]vertical-align:middle; */   /*为什么不起作用?  td 里面有这个属性，div里面没有这个属性*/
+	background-color: #f2f2f2;
+	overflow:hidden}
+#footer ul{
+	margin-top:50px;}
+#footer ul li{
+	display:inline;
+	color:#d9d9d9;
+	padding:0 13px;
+	line-height:35px;}
+#footer ul li a{
+	padding-right:18px;
+	color:#858585;
+	}
+#footer p{
+	color:#ccc;
+	font-size:12px;
+	line-height:35px;}
